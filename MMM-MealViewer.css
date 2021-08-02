@@ -1,0 +1,30 @@
+.MMM-MealViewer table {
+	width: 100%;
+	table-layout: fixed;
+  }
+
+.title {
+	font-size: 20px;
+}  
+  
+.school-name {
+	color: azure;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.menu-item {
+    font-size: 0.5em;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1em;
+}
+
+.lunch {
+	color:lightgreen;
+}
+
+.breakfast {
+	color:lightblue;
+}

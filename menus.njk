@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <td></td><td class='title'>School Menu</td><td></td></tr>
+    <tr>
+    <tr>
+{% for school in schools %}
+  <td class='school-name'>{{ school.name }}</td>
+{% else %}
+  
+{% endfor %}
+    </tr>
+    <tr>
+    
+    {% for school in schools %}
+    <td>
+        {% for item in school.menus.breakfast %}
+        <li class='menu-item breakfast'>{{item}}</li>
+        {% endfor %}
+
+        {% for item in school.menus.lunch %}
+        <li class='menu-item lunch'>{{item}}</li>
+        {% else %}
+        No school
+        
+        {% endfor %}
+
+    {% endfor %}
+    </tr>
+</table>
