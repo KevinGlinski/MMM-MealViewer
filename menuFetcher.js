@@ -9,11 +9,7 @@ const fetch = require("node-fetch");
 const MenuFetcher = function (school, schoolKey) {
     let reloadInterval = 3600000; //hourly 
 	let reloadTimer = null;
-	let meals = {
-        lunch: [],
-        breakfast: []
-    };
-
+	
 	let fetchFailedCallback = function () {};
 	let eventsReceivedCallback = function () {};
 
@@ -35,6 +31,10 @@ const MenuFetcher = function (school, schoolKey) {
             })
             .then((response) => response.text())
             .then((responseData) => {
+				let meals = {
+					lunch: [],
+					breakfast: []
+				};
 
                 let menu = JSON.parse(responseData);
 
